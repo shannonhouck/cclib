@@ -9,7 +9,7 @@ import datetime
 import itertools
 import math
 import re
-from typing import TYPE_CHECKING, Dict
+from typing import TYPE_CHECKING
 
 from cclib.parser import data, logfileparser, utils
 
@@ -406,7 +406,7 @@ cannot be determined. Rerun without `$molecule read`."""
 
         return energies, symbols, homo
 
-    def generate_atom_map(self) -> Dict[str, str]:
+    def generate_atom_map(self) -> dict[str, str]:
         """Generate the map to go from Q-Chem atom numbering:
         'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'H1', 'H2', 'H3', 'H4', 'C7', ...
         to cclib atom numbering:
@@ -428,7 +428,7 @@ cannot be determined. Rerun without `$molecule read`."""
         atommap = {k: v for k, v in zip(order_qchem, order_proper)}
         return atommap
 
-    def generate_formula_histogram(self) -> Dict[str, int]:
+    def generate_formula_histogram(self) -> dict[str, int]:
         """From the atomnos, generate a histogram that represents the
         molecular formula.
         """
@@ -777,12 +777,11 @@ cannot be determined. Rerun without `$molecule read`."""
                             if "solvent_params" not in self.metadata:
                                 self.metadata["solvent_params"] = dict()
                             self.metadata["solvent_params"]["epsilon_infinite"] = float(tokens[1])
-
-            if line.strip() == "==== cosmo data ====":
+            if "= cosmo data =" in line.strip().lower():
                 self.metadata["solvent_model"] = "COSMO"
-                while line.strip() != "=== end cosmo data ===":
+                while "= end cosmo data =" not in line.strip().lower():
                     line = next(inputfile)
-                    if line.startswith("eps"):
+                    if line.strip().startswith("eps"):
                         if "solvent_params" not in self.metadata:
                             self.metadata["solvent_params"] = dict()
                         self.metadata["solvent_params"]["epsilon"] = float(line.split()[2])

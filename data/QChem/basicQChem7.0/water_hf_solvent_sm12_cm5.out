@@ -1,7 +1,12 @@
 
 Running Job 1 of 1 water_hf_solvent_sm12_cm5.in
+<<<<<<< HEAD
 qchem water_hf_solvent_sm12_cm5.in_24404.0 /scratch/shannon.houck/qchem24404/ 1
 /sw/qchem/release/7.0.0/exe/qcprog.exe_s water_hf_solvent_sm12_cm5.in_24404.0 /scratch/shannon.houck/qchem24404/
+=======
+qchem water_hf_solvent_sm12_cm5.in_21401.0 /scratch/shannon.houck/qchem21401/ 1
+/sw/qchem/release/7.0.0/exe/qcprog.exe_s water_hf_solvent_sm12_cm5.in_21401.0 /scratch/shannon.houck/qchem21401/
+>>>>>>> 7c8da622a4f3f5f8b573908c227b842484335a2a
                   Welcome to Q-Chem
      A Quantum Leap Into The Future Of Chemistry
 
@@ -112,12 +117,20 @@ qchem water_hf_solvent_sm12_cm5.in_24404.0 /scratch/shannon.houck/qchem24404/ 1
  Parts of Q-Chem use Armadillo 12.8.2 (Cortisol Injector).
  http://arma.sourceforge.net/
 
+<<<<<<< HEAD
  Q-Chem begins on Wed Jul 29 13:20:59 2026  
+=======
+ Q-Chem begins on Wed Jul 29 10:44:38 2026  
+>>>>>>> 7c8da622a4f3f5f8b573908c227b842484335a2a
 
  Host: coreman6
 0
 
+<<<<<<< HEAD
  Scratch files written to /scratch/shannon.houck/qchem24404//
+=======
+ Scratch files written to /scratch/shannon.houck/qchem21401//
+>>>>>>> 7c8da622a4f3f5f8b573908c227b842484335a2a
  Executable: /sw/qchem/release/7.0.0/exe/qcprog.exe_s
  Number of threads = 1
  Jul426 |scratch|qcdevops|jenkins|workspace|build_RNUM -1
@@ -185,23 +198,41 @@ $end
  Standard Electronic Orientation quadrupole field applied
  Nucleus-field energy     =    -0.0000000008 hartrees
  ================ Generating on-the-fly SAD Guess ================
+<<<<<<< HEAD
  Attempting to make child job directory: /scratch/shannon.houck/qchem24404//Frg1/
  Attempting to make child job directory: /scratch/shannon.houck/qchem24404//Frg2/
  Creating input file /scratch/shannon.houck/qchem24404/Frg1.input
  using default PutDataFrgm: nothing
  calling putenv with: QCSCRATCH=/scratch/shannon.houck/qchem24404/ 
+=======
+ Attempting to make child job directory: /scratch/shannon.houck/qchem21401//Frg1/
+ Attempting to make child job directory: /scratch/shannon.houck/qchem21401//Frg2/
+ Creating input file /scratch/shannon.houck/qchem21401/Frg1.input
+ using default PutDataFrgm: nothing
+ calling putenv with: QCSCRATCH=/scratch/shannon.houck/qchem21401/ 
+>>>>>>> 7c8da622a4f3f5f8b573908c227b842484335a2a
  Spawning Job For Fragment 0
  Done Job For Fragment 0
  calling putenv with: QCSCRATCH=/scratch/shannon.houck 
  calling putenv with: QCTHREADS=1 
+<<<<<<< HEAD
  Creating input file /scratch/shannon.houck/qchem24404/Frg2.input
  using default PutDataFrgm: nothing
  calling putenv with: QCSCRATCH=/scratch/shannon.houck/qchem24404/ 
+=======
+ Creating input file /scratch/shannon.houck/qchem21401/Frg2.input
+ using default PutDataFrgm: nothing
+ calling putenv with: QCSCRATCH=/scratch/shannon.houck/qchem21401/ 
+>>>>>>> 7c8da622a4f3f5f8b573908c227b842484335a2a
  Spawning Job For Fragment 1
  Done Job For Fragment 1
  calling putenv with: QCSCRATCH=/scratch/shannon.houck 
  calling putenv with: QCTHREADS=1 
+<<<<<<< HEAD
  Time for running child jobs:  CPU 0.00 s  wall 0.44 s
+=======
+ Time for running child jobs:  CPU 0.00 s  wall 0.47 s
+>>>>>>> 7c8da622a4f3f5f8b573908c227b842484335a2a
  ============= Method Specific SAD Guess Constructed =============
  Guess from on-the-fly superposition of atomic densities
  Warning: Energy on first SCF cycle will be non-variational
@@ -358,7 +389,11 @@ $end
     5     -74.9643137317      2.87e-05  
     6     -74.9643136417      6.19e-06  Convergence criterion met
  ---------------------------------------
+<<<<<<< HEAD
  SCF time:   CPU 0.22s  wall 0.00s 
+=======
+ SCF time:   CPU 0.19s  wall 0.00s 
+>>>>>>> 7c8da622a4f3f5f8b573908c227b842484335a2a
  Summary of SMx free energies:
  	G_P    =    -0.8173 kcal/mol (polarization energy)
  	G_CDS  =    -2.1899 kcal/mol (non-electrostatic energy)
@@ -412,8 +447,13 @@ $end
       XXZZ      -2.1649   XYZZ       0.0000   YYZZ      -1.7249
       XZZZ       0.4892   YZZZ       0.0000   ZZZZ      -5.7572
  -----------------------------------------------------------------
+<<<<<<< HEAD
  Total job time:  0.82s(wall), 0.27s(cpu) 
  Wed Jul 29 13:21:00 2026
+=======
+ Total job time:  0.85s(wall), 0.24s(cpu) 
+ Wed Jul 29 10:44:39 2026
+>>>>>>> 7c8da622a4f3f5f8b573908c227b842484335a2a
 
         *************************************************************
         *                                                           *

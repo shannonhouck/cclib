@@ -22,7 +22,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Chemistry",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 dependencies = [
     "numpy",
     "packaging>=19.0",
@@ -63,10 +63,11 @@ bridges-no-openbabel = [
     "geometric",
     "qc-iodata>=1.0.0a2",
 ]
-dev = ["cclib[bridges,docs,test-infrastructure]"]
+dev = ["cclib[bridges,docs,test-infrastructure]", "twine"]
 dev-no-openbabel = ["cclib[bridges-no-openbabel,docs,test-infrastructure]"]
 docs = [
     "build",
+    "pip",
     "sphinx",
     "sphinx_rtd_theme",
 ]
@@ -164,25 +165,11 @@ preview = ["pixi-build"]
 cclib = { path = ".", editable = true }
 
 [tool.pixi.environments]
-py38 = { features = ["py38", "dev-no-openbabel", "bridges-git"], solve-group = "py38" }
-py39 = { features = ["py39", "dev-no-openbabel", "bridges-git"], solve-group = "py39" }
 py310 = { features = ["py310", "dev", "bridges-git"], solve-group = "py310" }
 py311 = { features = ["py311", "dev", "bridges-git"], solve-group = "py311" }
 py312 = { features = ["py312", "dev", "bridges-git"], solve-group = "py312" }
 py313 = { features = ["py313", "dev", "bridges-git"], solve-group = "py313" }
 py314 = { features = ["py314", "dev", "bridges-git"], solve-group = "py314" }
-
-[tool.pixi.feature.py38.dependencies]
-libint = { version = "==2.9.0", build = "*_4" }
-openbabel = "*"
-psi4 = "*"
-python = "3.8.*"
-
-[tool.pixi.feature.py39.dependencies]
-libint = { version = "==2.9.0", build = "*_4" }
-openbabel = "*"
-psi4 = "*"
-python = "3.9.*"
 
 [tool.pixi.feature.py310.dependencies]
 psi4 = "*"
@@ -201,6 +188,7 @@ psi4 = "*"
 python = "3.13.*"
 
 [tool.pixi.feature.py314.dependencies]
+psi4 = "*"
 python = "3.14.*"
 
 [tool.pixi.package]

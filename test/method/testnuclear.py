@@ -8,7 +8,7 @@
 import logging
 import re
 import sys
-from typing import Sequence
+from collections.abc import Sequence
 
 from cclib.method import Nuclear
 from cclib.parser import DALTON, GAMESS, Gaussian, Molcas, QChem, ccData, utils
@@ -58,7 +58,7 @@ class NuclearTest:
     def test_repulsion_energy(self) -> None:
         """Testing nuclear repulsion energy for one logfile where it is printed."""
 
-        data, logfile = getdatafile(QChem, "basicQChem5.4", ["water_mp4sdq.out"])
+        data, logfile = getdatafile(QChem, "basicQChem7.0", ["water_mp4sdq.out"])
         nuclear = Nuclear(data)
         nuclear.logger.setLevel(logging.ERROR)
 
@@ -213,7 +213,7 @@ class NuclearTest:
         Q-Chem output.
         """
 
-        data, _ = getdatafile(QChem, "basicQChem5.4", ["dvb_ir.out"])
+        data, _ = getdatafile(QChem, "basicQChem7.0", ["dvb_ir.out"])
         nuclear = Nuclear(data)
         nuclear.logger.setLevel(logging.ERROR)
 
